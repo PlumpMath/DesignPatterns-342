@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="DecoratorPattern\Beverages.cs" />
     <Compile Include="DecoratorPattern\Condiments.cs" />
+    <Compile Include="DecoratorPattern\Reader.cs" />
+    <Compile Include="DecoratorPattern\ReaderDecorations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
