@@ -8,7 +8,7 @@ namespace DesignPatterns.Factory
 {
     public abstract class Pizza
     {
-        internal string type;
+        public string type { get; internal set; }
 
         public Pizza()
         { }
