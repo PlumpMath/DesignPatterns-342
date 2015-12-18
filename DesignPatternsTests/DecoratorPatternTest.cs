@@ -8,6 +8,7 @@ namespace DesignPatterns
     public class DecoratorPatternTests
     {
         [TestMethod]
+        [TestCategory("Decorator")]
         public void StartBuzz()
         {
             Beverage testBeverage = new Decaf();
@@ -20,6 +21,7 @@ namespace DesignPatterns
         }
 
         [TestMethod]
+        [TestCategory("Decorator")]
         public void Reader()
         {
             string inputString = "A Cool New Value";

@@ -44,8 +44,11 @@
     <Compile Include="DecoratorPattern\Condiments.cs" />
     <Compile Include="DecoratorPattern\Reader.cs" />
     <Compile Include="DecoratorPattern\ReaderDecorations.cs" />
-    <Compile Include="Factory\PizzaStore.cs" />
-    <Compile Include="Factory\PizzaTypes.cs" />
+    <Compile Include="Factory\Regional\PizzaIngredient.cs" />
+    <Compile Include="Factory\Base\PizzaStore.cs" />
+    <Compile Include="Factory\Base\PizzaTypes.cs" />
+    <Compile Include="Factory\Regional\PizzaStore.cs" />
+    <Compile Include="Factory\Regional\PizzaTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

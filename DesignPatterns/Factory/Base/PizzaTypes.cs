@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Factory
+namespace DesignPatterns.Factory.Base
 {
     public abstract class Pizza
     {
         public string Name { get; internal set; }
         public string Dough { get; internal set; }
         public string Sauce { get; internal set; }
+        public string Cheeses { get; internal set; }
+        public string Veggies { get; internal set; }
         public List<string> Toppings { get; internal set; }
         public string Status
         {
@@ -35,7 +37,7 @@ namespace DesignPatterns.Factory
             m_StatusBuilder.AppendLine("Tossing dough...");
             m_StatusBuilder.AppendLine("Adding sauce...");
             m_StatusBuilder.AppendLine("Adding toppings: ");
-            for(int i =0; i < Toppings.Count; i++)
+            for (int i = 0; i < Toppings.Count; i++)
             {
                 m_StatusBuilder.AppendLine("\t" + Toppings[i]);
             }
@@ -68,7 +70,7 @@ namespace DesignPatterns.Factory
             this.Toppings.Add("Grated Reggiano Cheese");
         }
     }
-
+    
     public class NYStyleClamPizza : Pizza
     {
         public NYStyleClamPizza()
@@ -108,7 +110,7 @@ namespace DesignPatterns.Factory
         {
             this.m_StatusBuilder.AppendLine("Cutting the pizza into square slices");
         }
-    }
+    }    
 
     public class ChicagoStyleClamPizza : Pizza
     {
