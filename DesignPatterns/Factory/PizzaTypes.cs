@@ -8,29 +8,64 @@ namespace DesignPatterns.Factory
 {
     public abstract class Pizza
     {
-        public string type { get; internal set; }
+        public string Name { get; internal set; }
+        public string Dough { get; internal set; }
+        public string Sauce { get; internal set; }
+        public List<string> Toppings { get; internal set; }
+        public string Status
+        {
+            get
+            {
+                return m_StatusBuilder.ToString();
+            }
+        }
+
+
+        internal StringBuilder m_StatusBuilder;
 
         public Pizza()
-        { }
+        {
+            Toppings = new List<string>();
+            m_StatusBuilder = new StringBuilder();
+        }
 
-        public void Prepare()
-        { }
+        public virtual void Prepare()
+        {
+            m_StatusBuilder.AppendLine("Prepare " + Name);
+            m_StatusBuilder.AppendLine("Tossing dough...");
+            m_StatusBuilder.AppendLine("Adding sauce...");
+            m_StatusBuilder.AppendLine("Adding toppings: ");
+            for(int i =0; i < Toppings.Count; i++)
+            {
+                m_StatusBuilder.AppendLine("\t" + Toppings[i]);
+            }
+        }
 
-        public void Bake()
-        { }
+        public virtual void Bake()
+        {
+            m_StatusBuilder.AppendLine("Bake for 25 minutes at 350");
+        }
 
-        public void Cut()
-        { }
+        public virtual void Cut()
+        {
+            m_StatusBuilder.AppendLine("Cut pizza into diagonal slices");
+        }
 
-        public void Box()
-        { }
+        public virtual void Box()
+        {
+            m_StatusBuilder.AppendLine("Place pizza in official PizzaStore box");
+        }
     }
 
     public class NYStyleCheesePizza : Pizza
     {
         public NYStyleCheesePizza()
         {
-            this.type = "NYStyleCheesePizza";
+            this.Name = "NYStyleCheesePizza";
+            this.Dough = "This Crust Dough";
+            this.Sauce = "Marinara Sauce";
+
+            this.Toppings.Add("Grated Reggiano Cheese");
         }
     }
 
@@ -38,7 +73,7 @@ namespace DesignPatterns.Factory
     {
         public NYStyleClamPizza()
         {
-            this.type = "NYStyleClamPizza";
+            this.Name = "NYStyleClamPizza";
         }
     }
 
@@ -46,7 +81,7 @@ namespace DesignPatterns.Factory
     {
         public NYStylePepperoniPizza()
         {
-            this.type = "NYStylePepperoniPizza";
+            this.Name = "NYStylePepperoniPizza";
         }
     }
 
@@ -54,7 +89,7 @@ namespace DesignPatterns.Factory
     {
         public NYStyleVeggiePizza()
         {
-            this.type = "NYStyleVeggiePizza";
+            this.Name = "NYStyleVeggiePizza";
         }
     }
 
@@ -62,7 +97,16 @@ namespace DesignPatterns.Factory
     {
         public ChicagoStyleCheesePizza()
         {
-            this.type = "ChicagoStyleCheesePizza";
+            this.Name = "ChicagoStyleCheesePizza";
+            this.Dough = "Extra Thick Crust Dough";
+            this.Sauce = "Plum Tomato Sauce";
+
+            this.Toppings.Add("Shredded Mozzarella Cheese");
+        }
+
+        public override void Cut()
+        {
+            this.m_StatusBuilder.AppendLine("Cutting the pizza into square slices");
         }
     }
 
@@ -70,7 +114,7 @@ namespace DesignPatterns.Factory
     {
         public ChicagoStyleClamPizza()
         {
-            this.type = "ChicagoStyleClamPizza";
+            this.Name = "ChicagoStyleClamPizza";
         }
     }
 
@@ -78,7 +122,7 @@ namespace DesignPatterns.Factory
     {
         public ChicagoStylePepperoniPizza()
         {
-            this.type = "ChicagoStylePepperoniPizza";
+            this.Name = "ChicagoStylePepperoniPizza";
         }
     }
 
@@ -86,7 +130,7 @@ namespace DesignPatterns.Factory
     {
         public ChicagoStyleVeggiePizza()
         {
-            this.type = "ChicagoStyleVeggiePizza";
+            this.Name = "ChicagoStyleVeggiePizza";
         }
     }
 
@@ -94,7 +138,7 @@ namespace DesignPatterns.Factory
     {
         public CaliforniaStyleCheesePizza()
         {
-            this.type = "CaliforniaStyleCheesePizza";
+            this.Name = "CaliforniaStyleCheesePizza";
         }
     }
 
@@ -102,7 +146,7 @@ namespace DesignPatterns.Factory
     {
         public CaliforniaStyleClamPizza()
         {
-            this.type = "CalforniaStyleClamPizza";
+            this.Name = "CalforniaStyleClamPizza";
         }
     }
 
@@ -110,7 +154,7 @@ namespace DesignPatterns.Factory
     {
         public CaliforniaStylePepperoniPizza()
         {
-            this.type = "CalforniaStylePepperoniPizza";
+            this.Name = "CalforniaStylePepperoniPizza";
         }
     }
 
@@ -118,7 +162,7 @@ namespace DesignPatterns.Factory
     {
         public CaliforniaStyleVeggiePizza()
         {
-            this.type = "CalforniaStyleVeggiePizza";
+            this.Name = "CalforniaStyleVeggiePizza";
         }
     }
 }
