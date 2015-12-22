@@ -49,6 +49,8 @@
     <Compile Include="Factory\Base\PizzaTypes.cs" />
     <Compile Include="Factory\Regional\PizzaStore.cs" />
     <Compile Include="Factory\Regional\PizzaTypes.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\OneOfAKind.cs" />
   </ItemGroup>
