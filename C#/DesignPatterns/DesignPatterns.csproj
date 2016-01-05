@@ -40,15 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\Fan.cs" />
+    <Compile Include="Command\GarageDoor.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\LightCommands.cs" />
+    <Compile Include="Command\MacroCommand.cs" />
+    <Compile Include="Command\Remotes.cs" />
+    <Compile Include="Command\Stero.cs" />
     <Compile Include="DecoratorPattern\Beverages.cs" />
     <Compile Include="DecoratorPattern\Condiments.cs" />
     <Compile Include="DecoratorPattern\Reader.cs" />
     <Compile Include="DecoratorPattern\ReaderDecorations.cs" />
-    <Compile Include="Factory\Regional\PizzaIngredient.cs" />
+    <Compile Include="Factory\Abstract\PizzaIngredient.cs" />
     <Compile Include="Factory\Base\PizzaStore.cs" />
     <Compile Include="Factory\Base\PizzaTypes.cs" />
-    <Compile Include="Factory\Regional\PizzaStore.cs" />
-    <Compile Include="Factory\Regional\PizzaTypes.cs" />
+    <Compile Include="Factory\Abstract\PizzaStore.cs" />
+    <Compile Include="Factory\Abstract\PizzaTypes.cs" />
     <Compile Include="Observer\Observer.cs" />
     <Compile Include="Observer\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

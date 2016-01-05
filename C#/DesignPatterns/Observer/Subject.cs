@@ -53,7 +53,7 @@ namespace DesignPatterns.Observer
         {
             for(int i = 0; i < m_Observers.Count; i++)
             {
-                m_Observers[i].Update();
+                m_Observers[i].Update(this);
             }
             return;
         }
