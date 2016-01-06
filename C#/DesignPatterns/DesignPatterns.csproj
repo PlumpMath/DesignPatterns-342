@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\Duck.cs" />
+    <Compile Include="Adapter\Strings.cs" />
+    <Compile Include="Adapter\Turkey.cs" />
     <Compile Include="Command\Fan.cs" />
     <Compile Include="Command\GarageDoor.cs" />
     <Compile Include="Command\ICommand.cs" />
@@ -51,6 +54,8 @@
     <Compile Include="DecoratorPattern\Condiments.cs" />
     <Compile Include="DecoratorPattern\Reader.cs" />
     <Compile Include="DecoratorPattern\ReaderDecorations.cs" />
+    <Compile Include="Facade\Components.cs" />
+    <Compile Include="Facade\Theatrefacade.cs" />
     <Compile Include="Factory\Abstract\PizzaIngredient.cs" />
     <Compile Include="Factory\Base\PizzaStore.cs" />
     <Compile Include="Factory\Base\PizzaTypes.cs" />
