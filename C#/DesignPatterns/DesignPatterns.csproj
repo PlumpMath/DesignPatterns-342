@@ -65,6 +65,10 @@
     <Compile Include="Observer\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\OneOfAKind.cs" />
+    <Compile Include="TemplateMethod\CaffeineBeverage.cs" />
+    <Compile Include="TemplateMethod\CoffeeWithHook.cs" />
+    <Compile Include="TemplateMethod\Coffee.cs" />
+    <Compile Include="TemplateMethod\Tea.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
